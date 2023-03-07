@@ -12,11 +12,10 @@ const NewsItem = ({ news }) => {
       </article>
       <article>
         <p>{news.content.slice(0, 201)}</p>
-        <p>{news.source.name}</p>
+        <p>Source: {news.source.name}</p>
         <a 
           href={news.url} 
           target="_blank" rel="noreferrer"
-          style={{ color: 'white' }}
         >
           Read More
         </a>
