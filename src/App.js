@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     fetchTopHeadlines();
-  }, [])
+  }, [fetchTopHeadlines])
  
   return (
     <div className="App">
