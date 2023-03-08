@@ -20,6 +20,11 @@
   height: 150px;
 }
 
+h3 {
+  color: #896060;
+  font-weight: bold;
+}
+
 @media screen and (min-width: 450px) {
   flex-wrap: wrap;
 }

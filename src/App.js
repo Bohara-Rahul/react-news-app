@@ -1,4 +1,4 @@
-import { useEffect, useContext } from 'react';
+import { useEffect, useContext, useCallback } from 'react';
 import NewsList from './components/NewsList';
 import { NewsContext } from './context/NewsContext';
 import "./App.css";
@@ -8,7 +8,7 @@ function App() {
 
   useEffect(() => {
     fetchTopHeadlines();
-  }, [fetchTopHeadlines])
+  })
  
   return (
     <div className="App">
