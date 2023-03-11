@@ -1,10 +1,14 @@
-import { useEffect, useContext, useCallback } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import NewsList from './components/NewsList';
 import { NewsContext } from './context/NewsContext';
 import "./App.css";
 
 function App() {
   const { fetchTopHeadlines } = useContext(NewsContext);
+
+  // const categories = {
+  //   business, entertainment, general, health, science, sports, technology
+  // }
 
   useEffect(() => {
     fetchTopHeadlines();

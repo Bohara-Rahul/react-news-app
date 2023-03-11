@@ -10,8 +10,8 @@ const NewsProvider = ({ children }) => {
 
   const fetchTopHeadlines = async () => {
     try {
-      const response = await axios.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=" + process.env.REACT_APP_NEWS_API_KEY);
-      // const response = await axios.get("https://newsapi.org/v2/top-headlines?country=au&apiKey=32c6956eae314983a45e3224dc650774");
+      
+      const response = await axios.get("https://newsapi.org/v2/top-headlines?category="+category+"&language=en&apiKey=" + process.env.REACT_APP_NEWS_API_KEY);
       setTopHeadlines(response.data.articles);
       console.log(response);
     } catch(err) {
@@ -27,6 +27,7 @@ const NewsProvider = ({ children }) => {
     error, 
     topHeadlines,
     fetchTopHeadlines,
+    category,
     onCategoryChange
   };
 
