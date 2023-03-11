@@ -13,7 +13,6 @@ const NewsProvider = ({ children }) => {
       
       const response = await axios.get("https://newsapi.org/v2/top-headlines?country=us&language=en&apiKey=" + process.env.REACT_APP_NEWS_API_KEY);
       setTopHeadlines(response.data.articles);
-      console.log(response);
     } catch(err) {
       setError("Could not fetch the news stories");
     }
